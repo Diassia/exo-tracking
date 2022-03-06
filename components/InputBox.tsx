@@ -15,8 +15,7 @@ const InputBox: React.FC<InputBoxProps> = ({
     const keyboard = type==="number" ? 'number-pad' : 'default'
 
   return (
-    // <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-        // <DismissKeyboard>
+    <View style={inputStyle.container}>
         <TextInput
             value={value}
             onChangeText={value => onChange(name, value)}
@@ -24,7 +23,7 @@ const InputBox: React.FC<InputBoxProps> = ({
             keyboardType={keyboard}
             placeholder={name}
         />
-        // </DismissKeyboard>
+    </View>
   )
 }
 
@@ -34,8 +33,15 @@ const inputStyle = StyleSheet.create({
     input: {
       height: 40,
       margin: 12,
-      borderWidth: 1,
+    //   borderWidth: 1,
       padding: 10,
       width: 250
     },
+    container: {
+        // flex: 1,
+        backgroundColor: '#9590A8',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 4,
+      },
   })
