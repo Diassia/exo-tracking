@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { StyleSheet, Text, TextInput, View, Button, Pressable } from 'react-native'
 import DismissKeyboard from './components/DismissKeyboard'
 import InputBox from './components/InputBox'
+import Navigator from './components/Navigator'
+import PageHeader from './components/PageHeader'
 
 export default function App() {
   const [steps, setSteps] = useState("")
@@ -32,7 +34,7 @@ export default function App() {
   return (
     <DismissKeyboard>
       <View style={styles.container}>
-        {/* <Text style={styles.heading}>Exercise Tracker</Text> */}
+        <PageHeader headerText="Exercise Tracker" />
         <Text style={styles.text}>Steps</Text>
         <InputBox 
           value={steps}
@@ -57,7 +59,6 @@ export default function App() {
         <Pressable style={styles.button} onPress={() => null}> 
           <Text style={styles.buttonText}>Ok</Text>
         </Pressable>
-        {/* <Button color="#E5FFDE" title="OK" onPress={() => null} /> */}
         <StatusBar style="light" />
       </View>
     </DismissKeyboard>

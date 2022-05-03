@@ -33,12 +33,10 @@ const inputStyle = StyleSheet.create({
     input: {
       height: 40,
       margin: 12,
-    //   borderWidth: 1,
       padding: 10,
       width: 250
     },
     container: {
-        // flex: 1,
         backgroundColor: '#9590A8',
         alignItems: 'center',
         justifyContent: 'center',
